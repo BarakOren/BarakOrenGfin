@@ -2,18 +2,8 @@
     <div class="main">
         <FirstRow :orderStat="orderStat" :order="order" />
         <Row v-for="player in players" 
-        :name="player.name"
+        :player="player"
         :key="player.id"
-        :OVR="player.description"
-        :POS="player.position"
-        :Type="player.cardType" 
-        :PAC="player.statistics.pace.average"
-        :SHO="player.statistics.shooting.average"
-        :PAS="player.statistics.passing.average"
-        :DRI="player.statistics.dribbling.average"
-        :DEF="player.statistics.defense.average"
-        :PHY="player.statistics.physical.average"
-        :WR="player.workRatesAttacking"
         >
         </Row>
         </div>
@@ -67,43 +57,18 @@ export default {
     
 
 
-// var players = []
-// client.fetch(
-//   '*[_type == "fifaCard"]'
-// ).then(res => {
-//   res.forEach(player => {
-//     players.push({
-//     name: player.name,
-//     OVR: player.description, // need to figure out how to get only OVR 80
-//     POS: player.position,
-//     Type: player.cardType,
-//     PAC: player.statistics.pace.average,
-//     SHO: player.statistics.shooting.average,
-//     PAS: player.statistics.passing.average,
-//     DRI: player.statistics.dribbling.average,
-//     DEF: player.statistics.defense.average,
-//     PHY: player.statistics.physical.average,
-//     WR: player.workRatesAttacking //dont forget o present it as M or L
-//     })
-//     return players
-//   })})
-
-
-
-  // var player = {
-  //   name: res.name,
-  //   OVR: res.description, // need to figure out how to get only OVR 80
-  //   POS: res.position,
-  //   Type: res.cardType,
-  //   PAC: res.statistics.pace.average,
-  //   SHO: res.statistics.shooting.average,
-  //   PAS: res.statistics.passing.average,
-  //   DRI: res.statistics.dribbling.average,
-  //   DEF: res.statistics.defense.average,
-  //   PHY: res.statistics.physical.average,
-  //   WR: res.workRatesAttacking //dont forget o present it as M or L 
-  // }
-// })
+// :name="player.name"
+//         :key="player.id"
+//         :OVR="player.description"
+//         :POS="player.position"
+//         :Type="player.cardType" 
+//         :PAC="player.statistics.pace.average"
+//         :SHO="player.statistics.shooting.average"
+//         :PAS="player.statistics.passing.average"
+//         :DRI="player.statistics.dribbling.average"
+//         :DEF="player.statistics.defense.average"
+//         :PHY="player.statistics.physical.average"
+//         :WR="player.workRatesAttacking"
 
 </script>
 

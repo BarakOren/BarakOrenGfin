@@ -1,36 +1,36 @@
 <template>
-    <div class="row" @click="moreInfo(name)">
-        <div class="nameDiv">{{name}}</div>
-        <div class="stateContainer">
-                <div class="stat white" >{{OVR.substring(OVR.indexOf(")") - 2).substring(0, 2)}}</div>
-        </div>
+    <div class="row" @click="moreInfo(player.name)">
+        <div class="nameDiv">{{player.name}}</div>
             <div class="stateContainer">
-                <div class="stat black" >{{POS}}</div>
+                    <div class="stat white">{{player.description.substring(player.description.indexOf(")") - 2).substring(0, 2)}}</div>
             </div>
             <div class="stateContainer">
-                <div class="stat black" v-bind:style=" Type.length >= 6 ? 'fontSize: 8px;' : 'fontSize: 12;' ">{{Type}}</div>
+                <div class="stat black" >{{player.position}}</div>
             </div>
             <div class="stateContainer">
-                <div class="stat outline" >{{PAC}}</div>
+                <div class="stat black" v-bind:style=" player.cardType.length >= 6 ? 'fontSize: 8px;' : 'fontSize: 12;' ">{{player.cardType}}</div>
             </div>
             <div class="stateContainer">
-                <div class="stat outline">{{SHO}}</div>
+                <div class="stat outline" >{{player.statistics.pace.average}}</div>
             </div>
             <div class="stateContainer">
-                <div class="stat outline">{{PAS}}</div>
+                <div class="stat outline">{{player.statistics.shooting.average}}</div>
             </div>
             <div class="stateContainer">
-                <div class="stat outline">{{DRI}}</div>
+                <div class="stat outline">{{player.statistics.passing.average}}</div>
             </div>
             <div class="stateContainer">
-                <div class="stat outline">{{DEF}}</div>
+                <div class="stat outline">{{player.statistics.dribbling.average}}</div>
             </div>
             <div class="stateContainer">
-                <div class="stat outline" >{{PHY}}</div>
+                <div class="stat outline">{{player.statistics.defense.average}}</div>
             </div>
             <div class="stateContainer">
-                <div class="stat black">{{WR[0]}}</div>
+                <div class="stat outline" >{{player.statistics.physical.average}}</div>
             </div>
+            <div class="stateContainer">
+                <div class="stat black">{{player.workRatesAttacking[0]}}</div>
+            </div> 
     </div>
 
 
@@ -40,8 +40,7 @@
 <script>
 export default {
     name: "Row",
-    props: ["name", "OVR", "POS", "Type", "PAC", "SHO", "PAS", "DRI", "DEF",
-    "PHY", `WR`],
+    props: ["player"],
      methods: {
         moreInfo(name){
             this.$router.push(`/${name}`)
