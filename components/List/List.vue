@@ -28,18 +28,11 @@ var order = true
 
 export default {
     name: "List",
-    components: {
-        FirstRow, Row
-    },
+    components: {FirstRow, Row},
     data() {
-      return {
-        players: [],
-        title: "he was a skater boi"
-      }
+      return {players: []}
     },
-    async fetch(){   
-         this.players = await client.fetch('*[_type == "fifaCard"]')
-    },
+    async fetch(){this.players = await client.fetch('*[_type == "fifaCard"]')},
     methods: {
       order(type){ 
         client.fetch(`*[_type == "fifaCard"] | order(${type} ${order ? "desc" : "asc"})`) 
@@ -52,24 +45,9 @@ export default {
         .then(data => {this.players = data; order = !order;})
       }
     }  
-    
+   
 }
     
-
-
-// :name="player.name"
-//         :key="player.id"
-//         :OVR="player.description"
-//         :POS="player.position"
-//         :Type="player.cardType" 
-//         :PAC="player.statistics.pace.average"
-//         :SHO="player.statistics.shooting.average"
-//         :PAS="player.statistics.passing.average"
-//         :DRI="player.statistics.dribbling.average"
-//         :DEF="player.statistics.defense.average"
-//         :PHY="player.statistics.physical.average"
-//         :WR="player.workRatesAttacking"
-
 </script>
 
 <style scoped>

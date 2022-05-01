@@ -1,5 +1,27 @@
 # BarakOrenG
 
+Hello There!
+My name is Barak, and I want thank you for this opportunity.
+
+I do not know if maria told you, but this was my first interaction with Vue/Nuxt. maria asked me to bring the result on monday, and due to time pressure (I got another test to finish), I spent my time for this test learning about nuxt and sanity without any focus on BEM, tailwind or testing, and I had to pass on some important things (like adding a "loading" component).
+
+I have finished both pages, by clicking on a player from list you can view more information about him.
+
+inside the components you can find notes about the code.
+
+on the list page, you can sort the players by clicking on the small arrows near each category.
+I did not get the chance to figure out how to sort:
+OVR - which comes as a string "Aaron Ramsey (OVR 80) - check out.."
+Type - still not sure why, My first guess would be that it isnt working becuase some of the results comes with a space before the type (" Base"). 
+
+Because this is my first time using nuxt, I am sure there are things that could be done better, I would really love and appreciate if you could send me a short feedback (barakoren5@gmail.com) 
+
+Thank you again,
+Barak oren.
+
+
+
+
 ## Build Setup
 
 ```bash
@@ -8,62 +30,3 @@ $ npm install
 
 # serve with hot reload at localhost:3000
 $ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
-
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).

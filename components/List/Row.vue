@@ -8,7 +8,7 @@
                 <div class="stat black" >{{player.position}}</div>
             </div>
             <div class="stateContainer">
-                <div class="stat black" v-bind:style=" player.cardType.length >= 6 ? 'fontSize: 8px;' : 'fontSize: 12;' ">{{player.cardType}}</div>
+                <div class="stat black" v-bind:style=" player.cardType.length >= 7 ? 'fontSize: 8px;' : 'fontSize: 12;' ">{{player.cardType}}</div>
             </div>
             <div class="stateContainer">
                 <div class="stat outline" >{{player.statistics.pace.average}}</div>

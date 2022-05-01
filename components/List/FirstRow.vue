@@ -60,7 +60,7 @@
                 <img class="arrow" src="../../assets/arrow.png">
             </div>
         </div>
-        <div class="stat" id="last">WR
+        <div class="stat" id="last" @click="order('workRatesAttacking')">WR
             <div class="arrowDiv">
                 <img class="arrow" id="up" src="../../assets/arrow.png">
                 <img class="arrow" src="../../assets/arrow.png">
